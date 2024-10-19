@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio de Paulo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Animação de entrada -->
+  <div class="loading-screen">
+    <video autoplay muted loop class="background-video">
+      <source src="c.mp4" type="video/mp4">
+      Seu navegador não suporta vídeo.
+    </video>
+    <div class="letter-p"></div>
+  </div>
+
+  <!-- Conteúdo do site -->
+  <div class="content" style="display: none;">
+    <header>
+      <h1>Bem-vindo ao Portfólio de Paulo</h1>
+      <p>Desenvolvedor de sistemas com soluções criativas e funcionais.</p>
+    </header>
+
+    <section id="projects">
+      <h2 style="color: #1e00ff;">Meus Projetos</h2>
+      <div class="project-grid">
+        <!-- Projeto 1 -->
+        <article class="project">
+          <h3 style="color: #00ff00;">Projeto 1 - Site de Pets</h3>
+          <div class="image-gallery">
+            <img src="part1.png" alt="Imagem do projeto 1 - parte 1" class="clickable-img">
+            <img src="part2.png" alt="Imagem do projeto 1 - parte 2" class="clickable-img">
+            <img src="part3.png" alt="Imagem do projeto 1 - parte 3" class="clickable-img">
+          </div>
+          <p style="color: #fffcfb;">Este projeto ainda está em desenvolvimento e será um site inovador com itens diversos para pets</p>
+        </article>
+
+        <!-- Projeto 2 -->
+        <article class="project">
+          <h3 style="color: #00eeff;">Projeto 2 - Site de Barbearia</h3>
+          <div class="image-gallery">
+            <img src="1.png" alt="Imagem do projeto 2 - parte 1" class="clickable-img">
+            <img src="2.png" alt="Imagem do projeto 2 - parte 2" class="clickable-img">
+          </div>
+          <p style="color: #fffcfb;">Este projeto está em desenvolvimento...</p>
+        </article>
+
+        <!-- Projeto 3 -->
+        <article class="project">
+          <h3 style="color: #565c5d;">Projeto 3 - Site de Lavar Car</h3>
+          <div class="image-gallery">
+            <img src="l.png" alt="Imagem do projeto 3 - parte 1" class="clickable-img">
+            <img src="l2.png" alt="Imagem do projeto 3 - parte 2" class="clickable-img">
+            <img src="l3.png" alt="Imagem do projeto 3 - parte 3" class="clickable-img">
+          </div>
+          <p style="color: #fffcfb;">Este projeto é um site para facilitar tanto a vida do cliente quanto a do dono da empresa, com a opção de agendamento e serviços prestados da empresa...</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="social-media">
+      <h2>Minhas Redes Sociais | Contato</h2>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/seu_perfil" target="_blank">
+          <img src="instagram.png" alt="Instagram" class="social-icon">
+          <p>Instagram</p>
+        </a>
+        <a href="mailto:seuemail@example.com">
+          <img src="g.png" alt="E-mail" class="social-icon">
+          <p>E-mail</p>
+        </a>
+        <a href="https://www.tiktok.com/@seu_perfil" target="_blank">
+          <img src="tiktok.png" alt="TikTok" class="social-icon">
+          <p>TikTok</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+      <span class="close">&times;</span>
+      <img class="lightbox-content" id="lightbox-img" alt="Imagem ampliada">
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+      // Espera 3 segundos e depois oculta a tela de carregamento
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          const loadingScreen = document.querySelector('.loading-screen');
+          loadingScreen.style.opacity = 0;
+          setTimeout(() => {
+            loadingScreen.style.display = 'none';
+            document.querySelector('.content').style.display = 'block'; // Exibe o conteúdo
+          }, 1000); // Tempo para a transição de opacidade
+        }, 7000); // Tempo total de espera (3 segundos)
+      });
+    </script>
+
+    <footer>
+      <p>© 2024 Estúdio Paulo. Todos os direitos reservados.</p>
+    </footer>
+  </div>
+</body>
+</html>
