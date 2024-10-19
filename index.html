@@ -87,18 +87,18 @@
     <script src="script.js"></script>
 
     <script>
-      // Espera 3 segundos e depois oculta a tela de carregamento
-      window.addEventListener('load', function() {
-        setTimeout(function() {
-          const loadingScreen = document.querySelector('.loading-screen');
-          loadingScreen.style.opacity = 0;
-          setTimeout(() => {
-            loadingScreen.style.display = 'none';
-            document.querySelector('.content').style.display = 'block'; // Exibe o conteúdo
-          }, 1000); // Tempo para a transição de opacidade
-        }, 7000); // Tempo total de espera (3 segundos)
-      });
-    </script>
+  // Espera 8 segundos e depois oculta a tela de carregamento
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      const loadingScreen = document.querySelector('.loading-screen');
+      loadingScreen.style.opacity = 0;
+      setTimeout(() => {
+        loadingScreen.style.display = 'none';
+        document.querySelector('.content').style.display = 'block'; // Exibe o conteúdo
+      }, 1000); // Tempo para a transição de opacidade
+    }, 8000); // Tempo total de espera (8 segundos)
+  });
+</script>
 
     <footer>
       <p>© 2024 Estúdio Paulo. Todos os direitos reservados.</p>
